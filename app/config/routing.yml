@@ -1,0 +1,4 @@
+tp_fdj:
+    type: rest
+    prefix: /
+    resource: "@TpFdjBundle/Resources/config/routing.yml"

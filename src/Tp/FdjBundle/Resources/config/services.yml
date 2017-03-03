@@ -1,0 +1,7 @@
+parameters:
+#    tp_fdj.example.class: Tp\FdjBundle\Example
+
+services:
+#    tp_fdj.example:
+#        class: %tp_fdj.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

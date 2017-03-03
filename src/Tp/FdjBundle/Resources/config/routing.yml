@@ -1,0 +1,9 @@
+tp_fdj_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: TpFdjBundle:Default:index }
+
+fp_fdj_product:
+    type: rest
+    prefix: /v1
+    resource: Tp\FdjBundle\Controller\ProductController
+    name_prefix:  api_1_ # naming collision

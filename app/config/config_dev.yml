@@ -1,0 +1,42 @@
+imports:
+    - { resource: config.yml }
+
+framework:
+    router:
+        resource: "%kernel.root_dir%/config/routing_dev.yml"
+        strict_requirements: true
+    profiler: { only_exceptions: false }
+
+web_profiler:
+    toolbar: true
+    intercept_redirects: false
+
+monolog:
+    handlers:
+        main:
+            type:  stream
+            path:  %kernel.logs_dir%/%kernel.environment%.log
+            level: debug
+        firephp:
+            type:  firephp
+            level: info
+        chromephp:
+            type:  chromephp
+            level: info
+
+assetic:
+    use_controller: true
+
+#swiftmailer:
+#    delivery_address: me@example.com
+
+parameters:
+    customer_log_dir:   "%customer_log_dir_for_dev%"
+    customer_log_file_name:   "%customer_log_file_name_for_dev%"
+
+services:
+    published_message.listener:
+        class: Tp\FdjBundle\EventListener\PublishedMessageExceptionListener
+        arguments: ['%customer_log_dir%%customer_log_file_name%']
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception, method: onKernelException}
