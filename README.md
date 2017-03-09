@@ -17,14 +17,17 @@ information.
 Installation
 ------------
 
-1. Git clone  (in your local)
-2. Run cmd (Windows) and go to the folder, then change the environment mode to 'dev'
-3. Run composer update
-4. Please copy the i**.sqlite data file in the folder var/data/ 
+1. Clone this project locally (command line: git clone git@github.com:waynefr/TP.git)
+2. Open the Command Prompt or run cmd directly (in Windows, e.g.) and go to the project folder
+3. Run "composer update"
+4. Please copy the i**.sqlite data file in the folder var/data/
+5. Run "php app/console server:run"
+
 
 Usage
 -----
-For the general products list : your local link + /v1/products
-For the active products list : your local link + /v1/products/1
-For the inactive products list : your local link + /v1/products/0
-For error message 400, you can use  your local link + /v1/products/+d(>1) and the message is stocked in a log file
+Type the link "localhost:8000/v1/products" in a web browser
+  * For the general products list : localhost:8000/v1/products
+  * For the active products list : localhost:8000/v1/products/1
+  * For the inactive products list : localhost:8000/v1/products/0
+  * For error message 400, you can use  localhost:8000/v1/products/+d(>1) and the message is stocked in a log file
