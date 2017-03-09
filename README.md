@@ -20,7 +20,7 @@ Installation
 1. Clone this project locally (command line: git clone git@github.com:waynefr/TP.git)
 2. Open the Command Prompt or run cmd directly (in Windows, e.g.) and go to the project folder
 3. Run "composer update"
-4. Please copy the i**.sqlite data file in the folder var/data/
+4. Please copy your i**.sqlite data file in the folder var/data/
 5. Run "php app/console server:run"
 
 
